@@ -1,10 +1,7 @@
-// import the gql tagged template function
 const { gql } = require('apollo-server-express');
 
-// create our typeDefs
 const typeDefs = gql`
-
-type User {
+  type User {
     _id: ID
     username: String
     email: String
@@ -12,8 +9,8 @@ type User {
     thoughts: [Thought]
     friends: [User]
   }
-  
-type Thought {
+
+  type Thought {
     _id: ID
     thoughtText: String
     createdAt: String
@@ -37,5 +34,4 @@ type Thought {
   }
 `;
 
-// export the typeDefs
 module.exports = typeDefs;
